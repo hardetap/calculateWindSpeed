@@ -1,0 +1,33 @@
+function calculateWindSpeed() {
+  console.log("Программа для измерения скорости ветра");
+  var beaufortScale = [
+    { number: 0, description: "Штиль" },
+    { number: 1, description: "Тихий ветер" },
+    { number: 3, description: "Слабый ветер" },
+    { number: 6, description: "Слабый ветер" },
+    { number: 10, description: "Умеренный ветер" },
+    { number: 16, description: "Свежий ветер" },
+    { number: 21, description: "Сильный ветер" },
+    { number: 27, description: "Крепкий ветер" },
+    { number: 33, description: "Очень крепкий ветер" },
+    { number: 40, description: "Шторм" },
+    { number: 47, description: "Сильный шторм" },
+    { number: 55, description: "Жестокий шторм" },
+    { number: 64, description: "Ураган" }
+  ];
+
+  var windSpeed = parseFloat(prompt("Введите скорость ветра в узлах:"));
+  var windDescription = "Неизвестно";
+
+  for (var i = 0; i < beaufortScale.length; i++) {
+    if (windSpeed <= beaufortScale[i].number) {
+      windDescription = beaufortScale[i].description;
+      break;
+    }
+  }
+
+  console.log("Скорость ветра:", windSpeed, "узлов");
+  console.log("Описание:", windDescription);
+}
+
+calculateWindSpeed();
