@@ -16,8 +16,10 @@ function calculateWindSpeed() {
     { number: 64, description: "Ураган" }
   ];
 
+
   var windSpeed = parseFloat(prompt("Введите скорость ветра в узлах:"));
   var windDescription = "Неизвестно";
+
 
   for (var i = 0; i < beaufortScale.length; i++) {
     if (windSpeed <= beaufortScale[i].number) {
